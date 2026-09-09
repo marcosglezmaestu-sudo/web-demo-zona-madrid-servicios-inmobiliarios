@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — Zona Madrid Servicios Inmobiliarios</title>
+<meta name="description" content="Escríbenos, llámanos o pide tu valoración gratuita. Estamos en Calle Velázquez 45, Madrid.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260908e">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body class="page-contact">
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<header class="nav" data-nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="viviendas.html">Viviendas</a>
+      <a href="calculadora.html">Calculadora de hipoteca</a>
+      <a href="contacto.html" class="is-active">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+34910417466" class="nav-phone">☎ 910 417 466</a>
+      <a href="contacto.html#valoracion" class="btn btn-gold btn-sm">Valora tu vivienda</a>
+    </div>
+    <button class="nav-burger" data-menu-open aria-label="Abrir menú"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu-top"><span class="brand" style="color:var(--cream)"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</span><button class="mobile-menu-close" data-menu-close aria-label="Cerrar menú">✕</button></div>
+  <nav><a href="index.html">Inicio</a><a href="viviendas.html">Viviendas</a><a href="calculadora.html">Calculadora</a><a href="contacto.html">Contacto</a></nav>
+  <div class="mobile-menu-foot"><a href="tel:+34910417466">☎ 910 417 466</a></div>
+</div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="eyebrow">Hablemos</p>
+      <h1 class="page-title">Contacta con nosotros</h1>
+      <p class="section-sub">¿Buscas vivienda o quieres vender la tuya? Cuéntanos y te responde un agente en menos de 24 horas.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="contact-layout" id="valoracion">
+
+      <div>
+        <h2 class="section-title">Pide tu <em>valoración gratuita</em></h2>
+        <p class="section-sub" style="margin-bottom:1.8rem">Sin compromiso. Un agente visita tu vivienda y te da un rango de precio de mercado en 48 horas.</p>
+
+        <form data-contact-form>
+          <div class="field-row cols-2">
+            <div class="field"><label for="ct-nombre">Nombre</label><input type="text" id="ct-nombre" name="nombre" required placeholder="Tu nombre"></div>
+            <div class="field"><label for="ct-telefono">Teléfono</label><input type="tel" id="ct-telefono" name="telefono" required placeholder="600 000 000"></div>
+          </div>
+          <div class="field"><label for="ct-email">Email</label><input type="email" id="ct-email" name="email" required placeholder="tucorreo@ejemplo.com"></div>
+          <div class="field">
+            <label for="ct-motivo">¿Qué necesitas?</label>
+            <select id="ct-motivo" name="motivo">
+              <option>Quiero valorar mi vivienda para venderla</option>
+              <option>Busco vivienda para comprar</option>
+              <option>Quiero pedir una visita a una vivienda del catálogo</option>
+              <option>Otra consulta</option>
+            </select>
+          </div>
+          <div class="field"><label for="ct-mensaje">Mensaje <span class="hint">(opcional)</span></label><textarea id="ct-mensaje" name="mensaje" placeholder="Cuéntanos zona, presupuesto, plazos…"></textarea></div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="ct-consent" name="consent" required>
+            <label for="ct-consent">Acepto la <a href="#" style="text-decoration:underline">política de privacidad</a> y que Zona Madrid Servicios Inmobiliarios me contacte sobre mi consulta.</label>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block">Enviar mensaje</button>
+          <div class="form-msg" data-contact-msg></div>
+        </form>
+      </div>
+
+      <div>
+        <h2 class="section-title">Nuestra <em>oficina</em></h2>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div><strong>Dirección</strong><p>Calle de Velázquez 45, 1ºA — 28001 Madrid</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">☎</div>
+            <div><strong>Teléfono</strong><p><a href="tel:+34910417466">910 417 466</a> · <a href="https://wa.me/34610205384" target="_blank" rel="noopener">WhatsApp</a></p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">✉</div>
+            <div><strong>Email</strong><p><a href="mailto:contacto@zona-madrid-servicios-inmobiliarios.demo">contacto@zona-madrid-servicios-inmobiliarios.demo</a></p></div>
+          </div>
+        </div>
+
+        <div class="schedule-table">
+          <div class="schedule-row"><span>Lunes a viernes</span><span>9:30 – 20:00</span></div>
+          <div class="schedule-row"><span>Sábados</span><span>10:00 – 14:00</span></div>
+          <div class="schedule-row"><span>Domingos</span><span>Cerrado</span></div>
+        </div>
+
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps?q=Calle+de+Velazquez+45+Madrid&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la oficina de Zona Madrid Servicios Inmobiliarios"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</a><p>Compra, venta y valoración de vivienda en Madrid.</p></div>
+      <div class="footer-col"><h4>Navegación</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="viviendas.html">Viviendas</a></li><li><a href="calculadora.html">Calculadora</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Servicios</h4><ul><li><a href="contacto.html#valoracion">Valorar mi vivienda</a></li><li><a href="viviendas.html">Comprar vivienda</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="tel:+34910417466">910 417 466</a></li><li><a href="mailto:contacto@zona-madrid-servicios-inmobiliarios.demo">contacto@zona-madrid-servicios-inmobiliarios.demo</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Zona Madrid Servicios Inmobiliarios. Sitio de demostración — contenido de ejemplo.</span></div>
+  </div>
+</footer>
+
+<button class="chat-launcher" data-chat-open aria-label="Abrir asistente virtual">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <span class="chat-dot"></span>
+</button>
+<div class="chat-panel" data-chat-panel role="dialog" aria-label="Asistente virtual Zona Madrid Servicios Inmobiliarios">
+  <div class="chat-head"><div class="chat-head-avatar">Z</div><div class="chat-head-text"><strong>Aura, tu asistente</strong><span>Responde al momento · Zona Madrid Servicios Inmobiliarios</span></div><button class="chat-close" data-chat-close aria-label="Cerrar chat">✕</button></div>
+  <div class="chat-body" data-chat-body><div class="chat-msg bot">¿Prefieres contarme directamente lo que necesitas? Estoy aquí para ayudarte.</div></div>
+  <div class="chat-suggestions" data-chat-suggestions>
+    <button class="chat-suggestion" data-chat-quick="¿Cuánto tardáis en responder?">¿Cuánto tardáis en responder?</button>
+  </div>
+  <form class="chat-foot" data-chat-form><input type="text" name="mensaje" placeholder="Escribe tu pregunta…" maxlength="500" autocomplete="off" data-chat-input><button type="submit" class="chat-send" aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button></form>
+</div>
+
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260908e"></script>
+</body>
+</html>
