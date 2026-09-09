@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de hipoteca inteligente — Zona Madrid Servicios Inmobiliarios</title>
+<meta name="description" content="Calcula tu cuota mensual, el importe máximo que podrías financiar y tu ratio de endeudamiento. Sube tu nómina y la IA extrae tus ingresos por ti.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260908e">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body class="page-calculator">
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<header class="nav" data-nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="viviendas.html">Viviendas</a>
+      <a href="calculadora.html" class="is-active">Calculadora de hipoteca</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+34910417466" class="nav-phone">☎ 910 417 466</a>
+      <a href="contacto.html#valoracion" class="btn btn-gold btn-sm">Valora tu vivienda</a>
+    </div>
+    <button class="nav-burger" data-menu-open aria-label="Abrir menú"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu-top">
+    <span class="brand" style="color:var(--cream)"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</span>
+    <button class="mobile-menu-close" data-menu-close aria-label="Cerrar menú">✕</button>
+  </div>
+  <nav><a href="index.html">Inicio</a><a href="viviendas.html">Viviendas</a><a href="calculadora.html">Calculadora</a><a href="contacto.html">Contacto</a></nav>
+  <div class="mobile-menu-foot"><a href="tel:+34910417466">☎ 910 417 466</a><a href="contacto.html#valoracion" class="btn btn-gold">Valora tu vivienda gratis</a></div>
+</div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="eyebrow">Herramienta gratuita</p>
+      <h1 class="page-title">Calculadora de hipoteca inteligente</h1>
+      <p class="section-sub">Elige una vivienda del catálogo o introduce el precio a mano, sube tu nómina y en un minuto tienes un estudio orientativo completo.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="calc-layout">
+
+      <!-- ============ COLUMNA IZQUIERDA: WIZARD ============ -->
+      <div>
+        <div class="calc-steps" data-calc-steps>
+          <div class="calc-step-dot is-active" data-step-dot="1">1</div>
+          <div class="calc-step-line" data-step-line="1"></div>
+          <div class="calc-step-dot" data-step-dot="2">2</div>
+          <div class="calc-step-line" data-step-line="2"></div>
+          <div class="calc-step-dot" data-step-dot="3">3</div>
+          <div class="calc-step-line" data-step-line="3"></div>
+          <div class="calc-step-dot" data-step-dot="4">4</div>
+        </div>
+
+        <div class="calc-card">
+
+          <!-- PASO 1 — Vivienda -->
+          <div class="calc-panel is-active" data-calc-panel="1">
+            <h3>¿Qué vivienda te interesa?</h3>
+            <p class="hint">Elige una del catálogo o introduce el precio a mano.</p>
+
+            <div class="field-row cols-2" style="margin-bottom:1rem">
+              <button type="button" class="btn btn-ghost btn-block" data-calc-source="catalogo">Elegir del catálogo</button>
+              <button type="button" class="btn btn-ghost btn-block" data-calc-source="manual">Introducir precio a mano</button>
+            </div>
+
+            <div data-calc-source-panel="catalogo" hidden>
+              <div class="property-pick-list" data-property-pick-list><!-- PICKLIST_START -->
+<label class="property-pick" data-property-pick data-id="salamanca-velazquez-01" data-price="590000" data-tipo="piso">
+  <input type="radio" name="calc-property" value="salamanca-velazquez-01" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-salamanca-velazquez-01.webp" alt="">
+  <div><strong>Piso reformado junto a Velázquez</strong><span>590.000 € · Salamanca</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="chamberi-atico-02" data-price="675000" data-tipo="atico">
+  <input type="radio" name="calc-property" value="chamberi-atico-02" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-chamberi-atico-02.webp" alt="">
+  <div><strong>Ático con terraza en Chamberí</strong><span>675.000 € · Chamberí</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="boadilla-chalet-03" data-price="980000" data-tipo="chalet">
+  <input type="radio" name="calc-property" value="boadilla-chalet-03" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-boadilla-chalet-03.webp" alt="">
+  <div><strong>Chalet independiente con jardín</strong><span>980.000 € · Boadilla del Monte</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="arganzuela-obranueva-04" data-price="410000" data-tipo="obra-nueva">
+  <input type="radio" name="calc-property" value="arganzuela-obranueva-04" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-arganzuela-obranueva-04.webp" alt="">
+  <div><strong>Obra nueva con zonas comunes</strong><span>410.000 € · Arganzuela</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="chamartin-piso-05" data-price="720000" data-tipo="piso">
+  <input type="radio" name="calc-property" value="chamartin-piso-05" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-chamartin-piso-05.webp" alt="">
+  <div><strong>Piso familiar muy luminoso</strong><span>720.000 € · Chamartín</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="retiro-duplex-06" data-price="650000" data-tipo="atico">
+  <input type="radio" name="calc-property" value="retiro-duplex-06" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-retiro-duplex-06.webp" alt="">
+  <div><strong>Dúplex abuhardillado en Retiro</strong><span>650.000 € · Retiro</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="pozuelo-chalet-07" data-price="795000" data-tipo="chalet">
+  <input type="radio" name="calc-property" value="pozuelo-chalet-07" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-pozuelo-chalet-07.webp" alt="">
+  <div><strong>Chalet pareado con piscina</strong><span>795.000 € · Pozuelo de Alarcón</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="lasrozas-obranueva-08" data-price="465000" data-tipo="obra-nueva">
+  <input type="radio" name="calc-property" value="lasrozas-obranueva-08" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-lasrozas-obranueva-08.webp" alt="">
+  <div><strong>Obra nueva con terraza y trastero</strong><span>465.000 € · Las Rozas</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="tetuan-piso-09" data-price="195000" data-tipo="piso">
+  <input type="radio" name="calc-property" value="tetuan-piso-09" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-tetuan-piso-09.webp" alt="">
+  <div><strong>Piso a reformar, ideal primera vivienda</strong><span>195.000 € · Tetuán</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="chueca-atico-10" data-price="1150000" data-tipo="atico">
+  <input type="radio" name="calc-property" value="chueca-atico-10" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-chueca-atico-10.webp" alt="">
+  <div><strong>Ático de lujo con terraza panorámica</strong><span>1.150.000 € · Justicia (Chueca)</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="aravaca-piso-11" data-price="540000" data-tipo="piso">
+  <input type="radio" name="calc-property" value="aravaca-piso-11" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-aravaca-piso-11.webp" alt="">
+  <div><strong>Piso familiar con zonas comunes</strong><span>540.000 € · Moncloa-Aravaca</span></div>
+</label>
+<label class="property-pick" data-property-pick data-id="majadahonda-chalet-12" data-price="1450000" data-tipo="chalet">
+  <input type="radio" name="calc-property" value="majadahonda-chalet-12" style="position:absolute;opacity:0;pointer-events:none">
+  <img src="assets/img/prop-majadahonda-chalet-12.webp" alt="">
+  <div><strong>Chalet de diseño con piscina climatizada</strong><span>1.450.000 € · Majadahonda</span></div>
+</label>
+<!-- PICKLIST_END --></div>
+            </div>
+
+            <div data-calc-source-panel="manual" hidden>
+              <div class="field">
+                <label for="c-precio-manual">Precio de la vivienda (€)</label>
+                <input type="number" id="c-precio-manual" min="30000" step="1000" placeholder="Ej. 350000">
+              </div>
+              <div class="field">
+                <label for="c-tipo-manual">Tipo de vivienda</label>
+                <select id="c-tipo-manual">
+                  <option value="segunda-mano">Segunda mano (ITP)</option>
+                  <option value="obra-nueva">Obra nueva (IVA + AJD)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="calc-nav">
+              <span></span>
+              <button type="button" class="btn btn-primary" data-calc-next="1">Continuar →</button>
+            </div>
+          </div>
+
+          <!-- PASO 2 — Ingresos (documento o manual) -->
+          <div class="calc-panel" data-calc-panel="2">
+            <h3>Tus ingresos</h3>
+            <p class="hint">Sube tu nómina o tu declaración de la renta (foto o PDF) y la IA rellena los ingresos por ti. También puedes escribirlos a mano.</p>
+
+            <div class="upload-zone" data-upload-zone tabindex="0" role="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4M12 4 7 9M12 4l5 5M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+              <strong>Sube tu nómina o declaración de la renta</strong>
+              <span>Foto (JPG/PNG) o PDF, máx. 10 MB — la IA extrae tus ingresos automáticamente</span>
+              <input type="file" accept="image/jpeg,image/png,image/webp,application/pdf" data-upload-input>
+            </div>
+            <div class="upload-status" data-upload-status></div>
+
+            <div class="upload-divider">o escribe tus ingresos a mano</div>
+
+            <div class="field">
+              <label for="c-ingresos">Ingresos netos mensuales (€)</label>
+              <input type="number" id="c-ingresos" min="0" step="50" placeholder="Ej. 2200" data-calc-input="ingresos">
+            </div>
+            <div class="field">
+              <label for="c-deudas">Otras deudas mensuales (€) <span class="hint">— préstamos, coche, tarjetas…</span></label>
+              <input type="number" id="c-deudas" min="0" step="10" placeholder="Ej. 150" value="0" data-calc-input="deudas">
+            </div>
+
+            <div class="calc-nav">
+              <button type="button" class="btn btn-ghost" data-calc-prev="2">← Atrás</button>
+              <button type="button" class="btn btn-primary" data-calc-next="2">Continuar →</button>
+            </div>
+          </div>
+
+          <!-- PASO 3 — Ahorros y plazo -->
+          <div class="calc-panel" data-calc-panel="3">
+            <h3>Tu ahorro y el plazo</h3>
+            <p class="hint">Con esto calculamos la entrada, la cuota mensual y el tipo de interés orientativo.</p>
+
+            <div class="slider-field">
+              <div class="slider-field-top"><label for="c-ahorro">Ahorro disponible</label><span class="slider-value" data-slider-out="ahorro">30.000 €</span></div>
+              <input type="range" id="c-ahorro" min="0" max="500000" step="5000" value="30000" data-calc-input="ahorro">
+            </div>
+            <div class="slider-field">
+              <div class="slider-field-top"><label for="c-anos">Años de hipoteca</label><span class="slider-value" data-slider-out="anos">30 años</span></div>
+              <input type="range" id="c-anos" min="10" max="35" step="1" value="30" data-calc-input="anos">
+            </div>
+            <div class="slider-field">
+              <div class="slider-field-top"><label for="c-interes">Tipo de interés estimado (TAE)</label><span class="slider-value" data-slider-out="interes">3,1 %</span></div>
+              <input type="range" id="c-interes" min="1.5" max="6" step="0.1" value="3.1" data-calc-input="interes">
+            </div>
+
+            <div class="calc-nav">
+              <button type="button" class="btn btn-ghost" data-calc-prev="3">← Atrás</button>
+              <button type="button" class="btn btn-primary" data-calc-next="3">Calcular estudio →</button>
+            </div>
+          </div>
+
+          <!-- PASO 4 — Email gate -->
+          <div class="calc-panel" data-calc-panel="4">
+            <div class="email-gate">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <h3>Tu estudio ya está listo</h3>
+              <p class="hint">Déjanos tu email para desbloquear el desglose completo — cuota, endeudamiento e intereses año a año.</p>
+              <form data-lead-form>
+                <div class="field">
+                  <label for="c-email">Email</label>
+                  <input type="email" id="c-email" required placeholder="tucorreo@ejemplo.com" data-lead-input="email">
+                </div>
+                <div class="field">
+                  <label for="c-telefono">Teléfono <span class="hint">(opcional)</span></label>
+                  <input type="tel" id="c-telefono" placeholder="600 000 000" data-lead-input="telefono">
+                </div>
+                <div class="checkbox-row">
+                  <input type="checkbox" id="c-consent" required data-lead-input="consent">
+                  <label for="c-consent">Acepto que Zona Madrid Servicios Inmobiliarios me contacte sobre este estudio y guarde mis datos según la <a href="#" style="text-decoration:underline">política de privacidad</a>.</label>
+                </div>
+                <button type="submit" class="btn btn-gold btn-block">Ver mi estudio completo</button>
+                <div class="form-msg" data-lead-msg></div>
+              </form>
+            </div>
+            <div class="calc-nav"><button type="button" class="btn btn-ghost" data-calc-prev="4">← Atrás</button><span></span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ COLUMNA DERECHA: RESULTADOS ============ -->
+      <div class="calc-summary-side" data-calc-results hidden>
+        <div class="result-hero">
+          <span>Cuota mensual estimada</span>
+          <strong data-result="cuota">— €/mes</strong>
+          <small data-result="loan-detail">—</small>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-item"><span>Importe máx. financiable</span><strong data-result="maxFinanciable">—</strong></div>
+          <div class="result-item"><span>Entrada necesaria</span><strong data-result="entrada">—</strong></div>
+          <div class="result-item"><span>Gastos de compraventa</span><strong data-result="gastos">—</strong></div>
+          <div class="result-item"><span>Total de intereses</span><strong data-result="intereses">—</strong></div>
+        </div>
+
+        <div class="gauge-wrap">
+          <div class="gauge-label">Ratio de endeudamiento (cuota + deudas / ingresos)</div>
+          <div class="gauge-bar"><div class="gauge-fill" data-gauge-fill style="width:0%"></div></div>
+          <div class="gauge-verdict" data-gauge-verdict>—</div>
+        </div>
+
+        <div data-amort-locked>
+          <p class="hint" style="text-align:center;padding:1rem 0">🔒 Desglose año a año disponible al dejar tu email (paso 4).</p>
+        </div>
+        <div class="amort-table-wrap" data-amort-table hidden>
+          <table class="amort-table">
+            <thead><tr><th>Año</th><th>Cuota anual</th><th>Interés</th><th>Amortizado</th><th>Pendiente</th></tr></thead>
+            <tbody data-amort-body></tbody>
+          </table>
+        </div>
+
+        <div class="calc-disclaimer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+          <span>Esta calculadora ofrece una estimación orientativa y no sustituye al estudio ni a la oferta vinculante de una entidad financiera. Las condiciones reales dependen de tu perfil, tus ingresos y la política de cada banco.</span>
+        </div>
+      </div>
+
+      <div class="calc-summary-side" data-calc-placeholder>
+        <div class="calc-card" style="text-align:center;padding:3rem 1.6rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="46" height="46" style="margin-inline:auto;margin-bottom:1rem;color:var(--gold-2)"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v2M16 4v2"/></svg>
+          <h3>Tu estudio aparecerá aquí</h3>
+          <p class="hint">Completa los pasos de la izquierda y verás la cuota mensual, la entrada necesaria y tu ratio de endeudamiento en tiempo real.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</a><p>Compra, venta y valoración de vivienda en Madrid.</p></div>
+      <div class="footer-col"><h4>Navegación</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="viviendas.html">Viviendas</a></li><li><a href="calculadora.html">Calculadora</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div class="footer-col"><h4>Servicios</h4><ul><li><a href="contacto.html#valoracion">Valorar mi vivienda</a></li><li><a href="viviendas.html">Comprar vivienda</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="tel:+34910417466">910 417 466</a></li><li><a href="mailto:contacto@zona-madrid-servicios-inmobiliarios.demo">contacto@zona-madrid-servicios-inmobiliarios.demo</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Zona Madrid Servicios Inmobiliarios. Sitio de demostración — contenido de ejemplo.</span></div>
+  </div>
+</footer>
+
+<button class="chat-launcher" data-chat-open aria-label="Abrir asistente virtual">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <span class="chat-dot"></span>
+</button>
+<div class="chat-panel" data-chat-panel role="dialog" aria-label="Asistente virtual Zona Madrid Servicios Inmobiliarios">
+  <div class="chat-head"><div class="chat-head-avatar">Z</div><div class="chat-head-text"><strong>Aura, tu asistente</strong><span>Responde al momento · Zona Madrid Servicios Inmobiliarios</span></div><button class="chat-close" data-chat-close aria-label="Cerrar chat">✕</button></div>
+  <div class="chat-body" data-chat-body><div class="chat-msg bot">¿Dudas con la calculadora o con la hipoteca en general? Pregúntame lo que quieras.</div></div>
+  <div class="chat-suggestions" data-chat-suggestions>
+    <button class="chat-suggestion" data-chat-quick="¿Qué es el ratio de endeudamiento?">¿Qué es el ratio de endeudamiento?</button>
+    <button class="chat-suggestion" data-chat-quick="¿Los bancos financian el 100% de la vivienda?">¿Financian el 100%?</button>
+  </div>
+  <form class="chat-foot" data-chat-form><input type="text" name="mensaje" placeholder="Escribe tu pregunta…" maxlength="500" autocomplete="off" data-chat-input><button type="submit" class="chat-send" aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button></form>
+</div>
+
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260908e"></script>
+</body>
+</html>
