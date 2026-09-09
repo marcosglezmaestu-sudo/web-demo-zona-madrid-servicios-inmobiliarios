@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viviendas en venta — Zona Madrid Servicios Inmobiliarios</title>
+<meta name="description" content="Explora nuestro catálogo de pisos, chalets, áticos y obra nueva en Madrid. Filtra por precio, zona, habitaciones y metros.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260908e">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body class="page-catalog">
+<a href="#main" class="skip-link">Saltar al contenido</a>
+
+<header class="nav" data-nav>
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="viviendas.html" class="is-active">Viviendas</a>
+      <a href="calculadora.html">Calculadora de hipoteca</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+34910417466" class="nav-phone">☎ 910 417 466</a>
+      <a href="contacto.html#valoracion" class="btn btn-gold btn-sm">Valora tu vivienda</a>
+    </div>
+    <button class="nav-burger" data-menu-open aria-label="Abrir menú"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu-top">
+    <span class="brand" style="color:var(--cream)"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</span>
+    <button class="mobile-menu-close" data-menu-close aria-label="Cerrar menú">✕</button>
+  </div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="viviendas.html">Viviendas</a>
+    <a href="calculadora.html">Calculadora</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <a href="tel:+34910417466">☎ 910 417 466</a>
+    <a href="contacto.html#valoracion" class="btn btn-gold">Valora tu vivienda gratis</a>
+  </div>
+</div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="eyebrow">Catálogo</p>
+      <h1 class="page-title">Encuentra tu vivienda</h1>
+      <p class="section-sub">12 propiedades de ejemplo en Madrid y alrededores. <span class="demo-badge">Catálogo demo</span></p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="catalog-layout">
+
+      <!-- ============ FILTROS ============ -->
+      <aside class="filters-panel" data-filters>
+        <h3>Filtrar</h3>
+
+        <div class="filter-group">
+          <label class="group-label">Tipo de vivienda</label>
+          <div class="chip-group" data-filter-group="tipo">
+            <button class="chip is-active" data-value="">Todos</button>
+            <button class="chip" data-value="piso">Piso</button>
+            <button class="chip" data-value="atico">Ático</button>
+            <button class="chip" data-value="chalet">Chalet</button>
+            <button class="chip" data-value="obra-nueva">Obra nueva</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="group-label">Zona</label>
+          <div class="chip-group" data-filter-group="zona">
+            <button class="chip is-active" data-value="">Todas</button>
+            <button class="chip" data-value="Salamanca">Salamanca</button>
+            <button class="chip" data-value="Chamberí">Chamberí</button>
+            <button class="chip" data-value="Retiro">Retiro</button>
+            <button class="chip" data-value="Chamartín">Chamartín</button>
+            <button class="chip" data-value="Arganzuela">Arganzuela</button>
+            <button class="chip" data-value="Tetuán">Tetuán</button>
+            <button class="chip" data-value="Justicia (Chueca)">Chueca</button>
+            <button class="chip" data-value="Moncloa-Aravaca">Moncloa-Aravaca</button>
+            <button class="chip" data-value="Boadilla del Monte">Boadilla</button>
+            <button class="chip" data-value="Pozuelo de Alarcón">Pozuelo</button>
+            <button class="chip" data-value="Las Rozas">Las Rozas</button>
+            <button class="chip" data-value="Majadahonda">Majadahonda</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="group-label">Habitaciones mínimas</label>
+          <div class="chip-group" data-filter-group="habitaciones">
+            <button class="chip is-active" data-value="">Cualquiera</button>
+            <button class="chip" data-value="1">1+</button>
+            <button class="chip" data-value="2">2+</button>
+            <button class="chip" data-value="3">3+</button>
+            <button class="chip" data-value="4">4+</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="group-label">Precio (€)</label>
+          <div class="range-row">
+            <input type="number" placeholder="Mín." data-filter-input="precioMin" min="0" step="10000">
+            <span>—</span>
+            <input type="number" placeholder="Máx." data-filter-input="precioMax" min="0" step="10000">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="group-label">Metros mínimos (m²)</label>
+          <div class="range-row">
+            <input type="number" placeholder="Ej. 80" data-filter-input="metrosMin" min="0" step="5">
+          </div>
+        </div>
+
+        <button class="filters-clear" data-filters-clear>Borrar todos los filtros</button>
+      </aside>
+
+      <!-- ============ RESULTADOS ============ -->
+      <div>
+        <div class="catalog-toolbar">
+          <p class="catalog-count"><strong data-catalog-count>12</strong> viviendas encontradas</p>
+          <div class="catalog-sort">
+            <select data-catalog-sort>
+              <option value="destacadas">Destacadas primero</option>
+              <option value="precio-asc">Precio: menor a mayor</option>
+              <option value="precio-desc">Precio: mayor a menor</option>
+              <option value="metros-desc">Metros: más grandes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="catalog-grid" data-catalog-grid>
+          <!-- CATALOG_START -->
+<a href="vivienda-salamanca-velazquez-01.html" class="property-card card-grid reveal" data-tipo="piso" data-zona="Salamanca" data-precio="590000" data-habitaciones="3" data-metros="120" data-destacada="true" aria-label="Piso reformado junto a Velázquez">
+  <div class="property-card-media">
+    <img src="assets/img/prop-salamanca-velazquez-01.webp" alt="Piso reformado junto a Velázquez, Piso en Salamanca" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Piso</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">590.000 €</div>
+    <div class="property-card-title">Piso reformado junto a Velázquez</div>
+    <div class="property-card-zone">📍 Salamanca</div>
+    <div class="property-card-meta"><span>🛏 3 hab.</span><span>🛁 2 baños</span><span>📐 120 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-chamberi-atico-02.html" class="property-card card-grid reveal" data-tipo="atico" data-zona="Chamberí" data-precio="675000" data-habitaciones="2" data-metros="95" data-destacada="true" aria-label="Ático con terraza en Chamberí">
+  <div class="property-card-media">
+    <img src="assets/img/prop-chamberi-atico-02.webp" alt="Ático con terraza en Chamberí, Ático en Chamberí" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Ático</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">675.000 €</div>
+    <div class="property-card-title">Ático con terraza en Chamberí</div>
+    <div class="property-card-zone">📍 Chamberí</div>
+    <div class="property-card-meta"><span>🛏 2 hab.</span><span>🛁 2 baños</span><span>📐 95 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-boadilla-chalet-03.html" class="property-card card-grid reveal" data-tipo="chalet" data-zona="Boadilla del Monte" data-precio="980000" data-habitaciones="5" data-metros="320" data-destacada="true" aria-label="Chalet independiente con jardín">
+  <div class="property-card-media">
+    <img src="assets/img/prop-boadilla-chalet-03.webp" alt="Chalet independiente con jardín, Chalet en Boadilla del Monte" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Chalet</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">980.000 €</div>
+    <div class="property-card-title">Chalet independiente con jardín</div>
+    <div class="property-card-zone">📍 Boadilla del Monte</div>
+    <div class="property-card-meta"><span>🛏 5 hab.</span><span>🛁 4 baños</span><span>📐 320 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-arganzuela-obranueva-04.html" class="property-card card-grid reveal" data-tipo="obra-nueva" data-zona="Arganzuela" data-precio="410000" data-habitaciones="2" data-metros="78" data-destacada="true" aria-label="Obra nueva con zonas comunes">
+  <div class="property-card-media">
+    <img src="assets/img/prop-arganzuela-obranueva-04.webp" alt="Obra nueva con zonas comunes, Obra nueva en Arganzuela" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Obra nueva</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">410.000 €</div>
+    <div class="property-card-title">Obra nueva con zonas comunes</div>
+    <div class="property-card-zone">📍 Arganzuela</div>
+    <div class="property-card-meta"><span>🛏 2 hab.</span><span>🛁 2 baños</span><span>📐 78 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-chamartin-piso-05.html" class="property-card card-grid reveal" data-tipo="piso" data-zona="Chamartín" data-precio="720000" data-habitaciones="4" data-metros="145" data-destacada="false" aria-label="Piso familiar muy luminoso">
+  <div class="property-card-media">
+    <img src="assets/img/prop-chamartin-piso-05.webp" alt="Piso familiar muy luminoso, Piso en Chamartín" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Piso</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">720.000 €</div>
+    <div class="property-card-title">Piso familiar muy luminoso</div>
+    <div class="property-card-zone">📍 Chamartín</div>
+    <div class="property-card-meta"><span>🛏 4 hab.</span><span>🛁 3 baños</span><span>📐 145 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-retiro-duplex-06.html" class="property-card card-grid reveal" data-tipo="atico" data-zona="Retiro" data-precio="650000" data-habitaciones="3" data-metros="110" data-destacada="false" aria-label="Dúplex abuhardillado en Retiro">
+  <div class="property-card-media">
+    <img src="assets/img/prop-retiro-duplex-06.webp" alt="Dúplex abuhardillado en Retiro, Ático en Retiro" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Ático</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">650.000 €</div>
+    <div class="property-card-title">Dúplex abuhardillado en Retiro</div>
+    <div class="property-card-zone">📍 Retiro</div>
+    <div class="property-card-meta"><span>🛏 3 hab.</span><span>🛁 2 baños</span><span>📐 110 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-pozuelo-chalet-07.html" class="property-card card-grid reveal" data-tipo="chalet" data-zona="Pozuelo de Alarcón" data-precio="795000" data-habitaciones="4" data-metros="260" data-destacada="true" aria-label="Chalet pareado con piscina">
+  <div class="property-card-media">
+    <img src="assets/img/prop-pozuelo-chalet-07.webp" alt="Chalet pareado con piscina, Chalet en Pozuelo de Alarcón" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Chalet</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">795.000 €</div>
+    <div class="property-card-title">Chalet pareado con piscina</div>
+    <div class="property-card-zone">📍 Pozuelo de Alarcón</div>
+    <div class="property-card-meta"><span>🛏 4 hab.</span><span>🛁 3 baños</span><span>📐 260 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-lasrozas-obranueva-08.html" class="property-card card-grid reveal" data-tipo="obra-nueva" data-zona="Las Rozas" data-precio="465000" data-habitaciones="3" data-metros="105" data-destacada="false" aria-label="Obra nueva con terraza y trastero">
+  <div class="property-card-media">
+    <img src="assets/img/prop-lasrozas-obranueva-08.webp" alt="Obra nueva con terraza y trastero, Obra nueva en Las Rozas" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Obra nueva</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">465.000 €</div>
+    <div class="property-card-title">Obra nueva con terraza y trastero</div>
+    <div class="property-card-zone">📍 Las Rozas</div>
+    <div class="property-card-meta"><span>🛏 3 hab.</span><span>🛁 2 baños</span><span>📐 105 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-tetuan-piso-09.html" class="property-card card-grid reveal" data-tipo="piso" data-zona="Tetuán" data-precio="195000" data-habitaciones="2" data-metros="65" data-destacada="true" aria-label="Piso a reformar, ideal primera vivienda">
+  <div class="property-card-media">
+    <img src="assets/img/prop-tetuan-piso-09.webp" alt="Piso a reformar, ideal primera vivienda, Piso en Tetuán" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Piso</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">195.000 €</div>
+    <div class="property-card-title">Piso a reformar, ideal primera vivienda</div>
+    <div class="property-card-zone">📍 Tetuán</div>
+    <div class="property-card-meta"><span>🛏 2 hab.</span><span>🛁 1 baños</span><span>📐 65 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-chueca-atico-10.html" class="property-card card-grid reveal" data-tipo="atico" data-zona="Justicia (Chueca)" data-precio="1150000" data-habitaciones="3" data-metros="140" data-destacada="true" aria-label="Ático de lujo con terraza panorámica">
+  <div class="property-card-media">
+    <img src="assets/img/prop-chueca-atico-10.webp" alt="Ático de lujo con terraza panorámica, Ático en Justicia (Chueca)" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Ático</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">1.150.000 €</div>
+    <div class="property-card-title">Ático de lujo con terraza panorámica</div>
+    <div class="property-card-zone">📍 Justicia (Chueca)</div>
+    <div class="property-card-meta"><span>🛏 3 hab.</span><span>🛁 3 baños</span><span>📐 140 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-aravaca-piso-11.html" class="property-card card-grid reveal" data-tipo="piso" data-zona="Moncloa-Aravaca" data-precio="540000" data-habitaciones="4" data-metros="130" data-destacada="false" aria-label="Piso familiar con zonas comunes">
+  <div class="property-card-media">
+    <img src="assets/img/prop-aravaca-piso-11.webp" alt="Piso familiar con zonas comunes, Piso en Moncloa-Aravaca" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Piso</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">540.000 €</div>
+    <div class="property-card-title">Piso familiar con zonas comunes</div>
+    <div class="property-card-zone">📍 Moncloa-Aravaca</div>
+    <div class="property-card-meta"><span>🛏 4 hab.</span><span>🛁 2 baños</span><span>📐 130 m²</span></div>
+  </div>
+</a>
+<a href="vivienda-majadahonda-chalet-12.html" class="property-card card-grid reveal" data-tipo="chalet" data-zona="Majadahonda" data-precio="1450000" data-habitaciones="5" data-metros="380" data-destacada="false" aria-label="Chalet de diseño con piscina climatizada">
+  <div class="property-card-media">
+    <img src="assets/img/prop-majadahonda-chalet-12.webp" alt="Chalet de diseño con piscina climatizada, Chalet en Majadahonda" loading="lazy" decoding="async">
+    <div class="property-card-badges"><span class="badge gold">Chalet</span><span class="demo-badge">Ejemplo</span></div>
+  </div>
+  <div class="property-card-info">
+    <div class="property-card-price">1.450.000 €</div>
+    <div class="property-card-title">Chalet de diseño con piscina climatizada</div>
+    <div class="property-card-zone">📍 Majadahonda</div>
+    <div class="property-card-meta"><span>🛏 5 hab.</span><span>🛁 5 baños</span><span>📐 380 m²</span></div>
+  </div>
+</a>
+<!-- CATALOG_END -->
+        </div>
+        <p class="catalog-empty" data-catalog-empty hidden>No hay viviendas que coincidan con estos filtros. Prueba a ampliar tu búsqueda o <a href="contacto.html" style="text-decoration:underline">cuéntanos qué buscas</a> y te avisamos.</p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="assets/img/logo-mark.webp" alt="Zona Madrid Servicios Inmobiliarios" class="brand-mark"> Zona Madrid Servicios Inmobiliarios</a>
+        <p>Compra, venta y valoración de vivienda en Madrid, con la cercanía de una agencia de barrio y el criterio de un equipo experto.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul><li><a href="index.html">Inicio</a></li><li><a href="viviendas.html">Viviendas</a></li><li><a href="calculadora.html">Calculadora</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul><li><a href="contacto.html#valoracion">Valorar mi vivienda</a></li><li><a href="viviendas.html">Comprar vivienda</a></li><li><a href="calculadora.html">Estudio de hipoteca</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul><li><a href="tel:+34910417466">910 417 466</a></li><li><a href="mailto:contacto@zona-madrid-servicios-inmobiliarios.demo">contacto@zona-madrid-servicios-inmobiliarios.demo</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Zona Madrid Servicios Inmobiliarios. Sitio de demostración — contenido de ejemplo.</span></div>
+  </div>
+</footer>
+
+<button class="chat-launcher" data-chat-open aria-label="Abrir asistente virtual">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  <span class="chat-dot"></span>
+</button>
+<div class="chat-panel" data-chat-panel role="dialog" aria-label="Asistente virtual Zona Madrid Servicios Inmobiliarios">
+  <div class="chat-head">
+    <div class="chat-head-avatar">Z</div>
+    <div class="chat-head-text"><strong>Aura, tu asistente</strong><span>Responde al momento · Zona Madrid Servicios Inmobiliarios</span></div>
+    <button class="chat-close" data-chat-close aria-label="Cerrar chat">✕</button>
+  </div>
+  <div class="chat-body" data-chat-body>
+    <div class="chat-msg bot">¡Hola! Soy Aura 👋 Cuéntame qué tipo de vivienda buscas y te recomiendo algo del catálogo.</div>
+  </div>
+  <div class="chat-suggestions" data-chat-suggestions>
+    <button class="chat-suggestion" data-chat-quick="Busco un piso de 3 habitaciones por menos de 600.000€">Piso 3 hab. &lt;600.000€</button>
+    <button class="chat-suggestion" data-chat-quick="¿Qué diferencia hay entre arras y señal?">Dudas sobre arras</button>
+  </div>
+  <form class="chat-foot" data-chat-form>
+    <input type="text" name="mensaje" placeholder="Escribe tu pregunta…" maxlength="500" autocomplete="off" data-chat-input>
+    <button type="submit" class="chat-send" aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+  </form>
+</div>
+
+<script defer src="lib/gsap.min.js"></script>
+<script defer src="lib/ScrollTrigger.min.js"></script>
+<script defer src="lib/manifest.js"></script>
+<script defer src="main.js?v=20260908e"></script>
+</body>
+</html>
